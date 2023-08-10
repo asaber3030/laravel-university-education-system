@@ -14,9 +14,9 @@
 - Professor can make the students succeed in the next **semester/year**
 - Perfect UI for Students and easy to handle
 - Students can see his whole details in their studying year.
-- Single Page Application (No Relod)
+- Single Page Application (No Reload)
 - Students can publish summaries for their studying subjects
-- Professor can add courses for subjects with its own lectures
+- Professors can add courses for subjects with their own lectures
 - Notifications
 - Easy contact between students and professors
 - Timetables
@@ -24,16 +24,16 @@
 - Teaching staff view
 
 ### Here's how to run the application
-1. First download the files or run this into command line
+1. First download the files or run this into the command line
 `git clone asaber3030/university-education-system`
-2. Upload the database into your xampp server your will find `education.sql` into the folder you have downloaded
+2. Upload the database into your xampp server you will find `education.sql` in the folder you have downloaded
 3. Open the folder using any IDE you want
 4. Run this into the terminal
 `php artisan serve`
 `npm run dev`
-5. Then open this url
+5. Then open this URL
 `http://127.0.0.1:8000/login`
-6. Use this username and password to login into student dashboard
+6. Use this username and password to login into the student dashboard
 `Email: app`
 `Password: 123456789`
 7. For professor dashboard `http://127.0.0.1:8000/professor/login`
