@@ -1,0 +1,32 @@
+@import "../../../assets/css/global";
+
+.list-anns {
+  margin-top: 10px;
+  .list-all {
+    .ann {
+      @include makeBox();
+      gap: 40px;
+      margin-bottom: 10px;
+      .ann-description {
+        margin-top: 30px;
+        p {
+          word-break: break-word;
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+        h6 {
+          font-size: 17px;
+          margin: 10px 0;
+          font-weight: 800;
+        }
+        span {
+          color: gray
+        }
+        button {
+          margin-top: 15px;
+        }
+      }
+
+    }
+  }
+}

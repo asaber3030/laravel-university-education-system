@@ -1,0 +1,120 @@
+@import "../../../assets/css/global";
+
+// settings/app
+.app-page {
+  .select-app-status {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    .status {
+      cursor: pointer;
+      padding: 25px;
+      color: #FFFFff;
+      background-color: #333;
+      border-radius: 5px;
+      user-select: none;
+      text-align: center;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        margin: 10px auto;
+      }
+      h6 {
+        font-weight: 700;
+        font-size: 16px;
+      }
+      &.active {
+        background-color: #2ecc71;
+        cursor: not-allowed;
+        &:hover {
+          background-color: #2ecc71;
+        }
+      }
+      &:hover {
+        background-color: #222;
+      }
+    }
+  }
+  .app-logo {
+    margin: 20px 0;
+    @include flexBox(flex-start, center);
+    gap: 10px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    div {
+      position: relative;
+      input {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+    h6 {
+      font-size: 0.875rem !important;
+      font-weight: bold;
+      button {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+// settings/departments
+.departments {
+  gap: 5px;
+  .department {
+    @include makeBox();
+    @include flexBox(flex-start, center);
+    gap: 40px;
+    height: fit-content;
+    margin-bottom: 10px;
+    .left { flex: 1.5; }
+    .right { flex: 4; }
+    .left {
+      text-align: center;
+      img {
+        margin: 10px auto;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+      h6 {
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+    .right {
+      ul {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f1f1f1;
+      }
+    }
+  }
+}
+
+// settings/professors && settings/assistants
+.list-professors {
+  .departments-list {
+    .department {
+      margin-bottom: 25px;
+      color: #444 !important;
+      .department-header {
+        margin: 10px 0;
+        h6 {
+          font-size: 14px;
+        }
+      }
+      .department-professors {
+        @include flexBox();
+        gap: 10px
+      }
+    }
+  }
+}

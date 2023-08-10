@@ -1,0 +1,96 @@
+@import "../../../../assets/css/global";
+
+.view-course {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 2.5fr 1fr;
+  padding-top: 10px;
+
+  .left-course-lectures {
+    .list-lectures {
+      .lecture {
+        @include boxShadow(4px);
+        @include flexBox(space-between, center);
+        @include transition();
+        padding: 10px 25px;
+        margin-bottom: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        &:hover { background-color: #333; cursor: pointer; .left-lecture a { color: lightgray !important; } }
+        .right-lecture {
+          @include flexBox();
+          gap: 25px;
+        }
+        .left-lecture { a { color: #444; @include transition(); } }
+      }
+    }
+    .course-description {
+      @include makeBox();
+      margin-top: 15px;
+      p { color: gray; font-size: 13.2px; line-height: 2; margin-bottom: 0; padding: 0 10px; }
+      h6 {
+        font-size: 16px;
+        padding: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .right-course-details {
+    @include makeBox();
+    height: fit-content;
+  }
+
+}
+
+.view-lecture {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 2.5fr 1fr;
+  padding-top: 10px;
+  .left-lecture-video {
+    .lecture-video {
+      h6 { border-bottom: none; margin-bottom: 0; font-size: 20px; }
+      video { width: 100%; border-radius: 5px; }
+    }
+  }
+
+  .left-lecture-details {
+    height: fit-content;
+    .list-lectures {
+      > h6 {
+        margin: 0 0 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #666;
+      }
+      padding-bottom: 5px;
+      border-bottom: 1px solid #e5e5e5;
+      .lecture {
+        @include boxShadow(4px);
+        @include flexBox(space-between, center);
+        @include transition();
+        padding: 10px 25px;
+        margin-bottom: 5px;
+        background-color: #fff;
+        border-radius: 5px;
+        .right-lecture {
+          @include flexBox();
+          gap: 25px;
+        }
+        .left-lecture { a { color: #444; @include transition(); } }
+      }
+    }
+    .h6-title {
+      margin: 10px 0 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #666;
+    }
+    .lecture-all-details {
+      @include makeBox();
+      margin-top: 10px;
+
+    }
+  }
+}

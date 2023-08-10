@@ -1,0 +1,35 @@
+@import "../../../../assets/css/global";
+
+.student-grades {
+  .alert {
+    @include flexBox(flex-start, center);
+    gap: 5px;
+    span {
+      background-color: #96bfff;
+      color: #1e55a9;
+      padding: 3px 9px;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+  }
+  .alert-cols {
+    margin: 10px 0;
+    .alert-heading {
+      font-size: 15px;
+      color: #1e55a9;
+      padding: 10px 0;
+    }
+    ul {
+      @include flexBox();
+      gap: 10px;
+      li {
+        padding: 5px 10px;
+        font-size: 13px;
+        background-color: #96bfff;
+        font-weight: bold;
+        border-radius: 5px;
+        b, span { font-weight: 500 !important }
+      }
+    }
+  }
+}

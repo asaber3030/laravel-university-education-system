@@ -1,0 +1,41 @@
+@import "../../../../assets/css/global";
+
+.add-student-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns:  3fr 1fr;
+}
+
+.add-students {
+  .alert {
+    @include flexBox(flex-start, center);
+    gap: 5px;
+    span {
+      background-color: #96bfff;
+      color: #1e55a9;
+      padding: 3px 9px;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+  }
+}
+
+.cols-desc {
+  @include makeBox();
+  height: fit-content;
+  margin-top: 10px;
+  ul {
+    li {
+      @include flexBox(space-between);
+      font-size: 13px;
+      padding: 5px 9px;
+      margin: 3px 0;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      span {
+        color: gray;
+        font-weight: bold;
+      }
+    }
+  }
+}

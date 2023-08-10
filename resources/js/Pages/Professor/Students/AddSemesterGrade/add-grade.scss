@@ -1,0 +1,10 @@
+@import "../../../../assets/css/global";
+
+.form-groups {
+  @include flexBox();
+  gap: 10px;
+  .form-group {
+    flex: 1;
+    margin-top: 3px;
+  }
+}

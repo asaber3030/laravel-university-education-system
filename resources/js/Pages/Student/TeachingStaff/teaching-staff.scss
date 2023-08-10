@@ -1,0 +1,40 @@
+@import "../../../assets/css/global";
+
+.list-staff {
+  .staff-title {
+    margin: 10px 0 25px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .alert {
+    margin-bottom: 25px;
+  }
+  .list-items-profes {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 25px;
+    .user {
+      .header {
+        text-align: center;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #f1f1f1;
+        img {
+          width: 90px;
+          height: 90px;
+          margin: 10px auto;
+        }
+        h6 {
+          font-size: 18px;
+        }
+        span {
+          font-size: 11px;
+        }
+      }
+      .content {
+        @include makeBox();
+      }
+    }
+  }
+}

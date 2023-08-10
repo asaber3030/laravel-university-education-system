@@ -1,0 +1,66 @@
+@import "../../../../assets/css/global";
+
+.import-students-container {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  gap: 15px;
+  margin-top: 12px;
+  .left-items {
+    .errors {
+      @include gridBox(3);
+      margin-top: 15px;
+      gap: 10px;
+      .error {
+        @include makeBox(#111);
+        h6 {
+          font-size: 18px;
+          text-align: center;
+          padding-bottom: 10px;
+          color: lightgray;
+          margin-bottom: 15px;
+          border-bottom: 1px solid #222;
+        }
+        ul {
+          @include flexBox();
+          gap: 5px;
+          li {
+            padding: 5px 8px;
+            font-size: 10px;
+            background-color: #222;
+            color: lightblue;
+            border-radius: 5px;
+            &:last-of-type { margin-bottom: 0; }
+          }
+        }
+      }
+    }
+  }
+  .right-items {
+    .needed-cols {
+      @include makeBox();
+      > h5 {}
+      ul {
+        li {
+          justify-content: space-between;
+          background-color: #f1f1f1;
+          padding: 5px 10px;
+          border-radius: 5px;
+          box-shadow: 0 2px 3px #c3c3c3;
+          margin: 5px 0;
+        }
+        span { font-size: 14px; flex: 1; }
+        div {
+          font-family: $code-font;
+          font-weight: 400;
+          font-size: 13px;
+          @include flexBox(flex-end);
+          gap: 3px;
+        }
+      }
+    }
+    .btn-secondary {
+      margin: 10px 5px 0 0;
+    }
+  }
+
+}

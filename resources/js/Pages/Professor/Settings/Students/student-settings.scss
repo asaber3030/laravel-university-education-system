@@ -1,0 +1,94 @@
+@import "../../../../assets/css/global";
+
+.settings-container {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 3fr .8fr;
+  height: fit-content;
+  .student-settings-sidebar {
+    border-radius: 5px;
+    height: fit-content;
+    .label-settings {
+      &:not(:last-of-type) {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #f1f1f1;
+      }
+      h6 {
+        font-size: 12px;
+        padding: 5px 0;
+        margin: 8px 15px;
+        border-bottom: 1px solid #ddd;
+        font-weight: 900;
+        color: #555;
+        text-transform: uppercase;
+        svg { margin-right: 10px }
+      }
+    }
+    ul {
+      li {
+        a {
+          @include transition(.3ms);
+          @include flexBox(flex-start, center);
+          gap: 15px;
+          display: block;
+          padding: 3px 10px;
+          font-size: 13px;
+          border-radius: 5px;
+          color: #444;
+          svg { margin-right: 10px; flex: 1; width: 20px; }
+          span { flex: 9 }
+          &.active { color: #FFF; background-color: #333; &:hover { background-color: #333; } }
+          &:hover {
+            background-color: #333;
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
+  .settings-content {
+    @include boxShadow(3px);
+    height: fit-content;
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    h6.settings-content-title {
+      font-size: 17px;
+
+    }
+  }
+
+  select, input, textarea { font-size: 14px }
+  label { font-weight: bold; }
+
+  .settings-set-left-right {
+    @include flexBox(flex-start, center);
+    padding: 15px 0;
+    margin: 0 15px;
+    gap: 5px;
+    &:not(:last-of-type) { border-bottom: 1px solid #f1f1f1;}
+    .set-lbl-txt { flex: 1; font-weight: bold; color: #555; font-size: 14px; }
+    .icon { flex: 1; }
+    .set-choose-options {
+      flex: 4;
+      label { display: none; }
+    }
+  }
+
+  .div-group-set {
+    padding: 5px;
+  }
+  .apply-button {
+    margin-left: 15px;
+  }
+
+  /*
+    URL: professor/settings/students
+    COMPONENT: Professor/Settings/Students/Settings.jsx
+  */
+  .student-settings-main {
+  }
+}
+
+

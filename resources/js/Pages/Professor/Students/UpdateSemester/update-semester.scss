@@ -1,0 +1,30 @@
+@import "../../../../assets/css/global";
+
+.assign-semester-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+
+  .left-semester-assign {
+
+  }
+
+  .right-information {
+    .default-box {
+      @include makeBox();
+      box-shadow: 0 2px 3px #ddd !important;
+      margin: 10px 0;
+    }
+    .grades {
+      .grade {
+        padding: 10px 18px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 5px 0;
+        box-shadow: 0 2px 3px #ddd;
+        h6 { font-size: 16px; }
+      }
+    }
+  }
+
+}

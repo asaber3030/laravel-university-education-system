@@ -1,0 +1,82 @@
+@import "../../../../assets/css/global";
+
+.custom-header {
+  @include flexBox(space-between, center);
+  margin-bottom: 20px;
+  .student-name-span {
+    width: fit-content;
+  }
+}
+
+.select-subject {
+  margin: 10px 0;
+  @include makeBox();
+}
+
+.selection {
+  @include flexBox(space-between, center);
+  gap: 10px;
+  .left-v, .right-v {
+    flex: 1;
+    padding: 5px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 3px #ddd;
+    &.active { background-color: #222; color: #FFF; }
+  }
+}
+
+.grid-view {
+  @include makeBox();
+  margin-top: 15px;
+}
+
+.update-semester-container {
+  @include flexBox();
+  gap: 15px;
+  .course-grade-container {
+    @include makeBox();
+    flex: 1;
+    .subject-title {
+      font-size: 22px;
+      margin-bottom: 18px;
+      font-weight: bold;
+      text-align: center;
+      a { color: #444; &:hover { text-decoration: underline; } }
+      span { display: block; font-size: 14px; color: gray; font-weight: 300; margin-top: 8px; }
+    }
+
+    ul {
+      li {
+        @include flexBox(space-between, center);
+        padding: 8px 0;
+        span:first-of-type { }
+        span:last-of-type {
+          display: flex;
+          justify-content: flex-end;
+          input {
+            width: 40%;
+
+            border: 1px solid #ddd;
+            border-radius: 5px;
+          }
+        }
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #f1f1f1;
+        }
+      }
+    }
+
+  }
+}
+
+.form-groups {
+  @include flexBox();
+  gap: 10px;
+  .form-group {
+    flex: 1;
+    margin-top: 3px;
+  }
+}

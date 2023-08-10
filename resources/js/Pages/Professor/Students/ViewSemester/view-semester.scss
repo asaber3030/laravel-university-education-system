@@ -1,0 +1,55 @@
+@import "../../../../assets/css/global";
+
+.view-semester {
+  @include flexBox();
+  gap: 30px;
+  margin: 10px 0;
+  .first-column { flex: 7; }
+  .second-column { flex: 3; }
+  .default-section {
+    @include makeBox();
+    margin: 10px 0;
+    .header-title { text-align: center; background-color: #f1f1f1; margin: 0 0 15px; box-shadow: 0 2px 1px #e5e5e5; padding: 10px; font-size: 18px; color: #555; border-radius: 5px; border-bottom: 1px solid #f1f1f1; }
+    .default-title {
+      padding: 0 0 10px 0;
+      border-bottom: 1px solid #f1f1f1;
+      color: #555;
+      font-size: 18px;
+    }
+    .list-items li:not(:last-of-type) { border-bottom: 1px solid #f1f1f1; }
+  }
+  .list-subjects {
+    .subject {
+      padding: 10px 0;
+      height: fit-content;
+      &:not(:last-of-type) { border-bottom: 1px solid #e5e5e5; }
+      .subject-title {
+        @include flexBox(space-between, center);
+        font-size: 17px;
+
+        a { color: $wet-dark; &:hover { color: $blue-light; text-decoration: underline; } }
+        .text-success{ font-size: 17px !important; }
+      }
+      .grades-table {
+        table {
+          @include boxShadow(2px);
+          border-radius: 5px;
+          margin: 13px 0 0;
+          background-color: #FFF;
+          th,td { font-size: 13px; text-align: center; }
+          th { font-size: 11px }
+          .th-title { background-color: #cad2d7; color: #085291; }
+        }
+      }
+    }
+  }
+  .alert-custom {
+    background-color: #FFF;
+    border-left: 4px solid $yellow-dark;
+    box-shadow: 0 2px 3px #ddd;
+    border-radius: 0;
+    color: #764118;
+    margin-top: 0;
+  }
+}
+

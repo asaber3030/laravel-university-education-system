@@ -1,0 +1,60 @@
+@import "../../../../assets/css/global";
+
+.current-semester {
+  @include flexBox();
+  margin-top: 15px;
+  gap: 10px;
+  .first-column {
+    flex: 2;
+  }
+  .second-column {
+    flex: 5;
+  }
+
+  .default-section {
+    @include makeBox();
+    margin: 10px 0;
+    .header-title { text-align: center; background-color: #f1f1f1; margin: 0 0 15px; box-shadow: 0 2px 1px #e5e5e5; padding: 10px; font-size: 18px; color: #555; border-radius: 5px; border-bottom: 1px solid #f1f1f1; }
+    .list-items li:not(:last-of-type) { border-bottom: 1px solid #f1f1f1; }
+
+  }
+  .actions-links {
+    @include flexBox();
+    gap: 5px;
+  }
+  .subjects-information, .semester-info, .previous-semesters {
+    > h5 {
+      font-size: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f1f1f1;
+      color: #555;
+    }
+    ul {
+      li {
+        @include flexBox(space-between, center);
+        padding: 5px 15px;
+        background-color: #f1f1f1;
+        margin: 5px 0;
+        border-radius: 5px;
+        .left-li {
+          color: #555;
+        }
+        .right-li {
+          font-size: 15px;
+          color: gray;
+        }
+      }
+    }
+    p {
+      line-height: 1.8;
+      margin: 10px 0 0;
+      font-size: 13px;
+      color: #666;
+      padding: 0 10px;
+    }
+  }
+
+  .previous-semesters {
+    h5 a { color: #555; &:hover { text-decoration: underline } }
+  }
+}

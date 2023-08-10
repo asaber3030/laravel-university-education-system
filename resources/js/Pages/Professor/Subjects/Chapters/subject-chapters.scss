@@ -1,0 +1,45 @@
+@import "../../../../assets/css/global";
+
+.subject-chapters {
+  @include flexBox();
+  gap: 10px;
+  margin-top: 15px;
+  .subject {
+    flex: 3;
+
+    ul {
+      li {
+        @include boxShadow(3px);
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        background-color: #fff !important;
+        &:first-of-type { margin-top: 0; }
+        span { padding-left: 10px; font-size: 19px !important;
+          display: block; }
+        p {
+          font-size: 14px;
+          color: #555;
+          line-height: 1.6;
+          padding: 10px 10px 0;
+        }
+        .actions {
+          @include flexBox();
+          padding: 10px 0 0;
+          border-top: 1px solid #f1f1f1;
+          gap: 10px;
+          a { font-size: 15px }
+        }
+      }
+    }
+  }
+  .subject-information {
+    @include makeBox();
+    flex: 1;
+    > h6 {
+      font-size: 17px;
+      text-align: center;
+
+    }
+  }
+}

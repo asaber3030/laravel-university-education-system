@@ -1,0 +1,41 @@
+@import "../../../assets/css/global";
+
+.summary-container {
+  .filter-summary {
+    @include flexBox(space-between, center);
+    margin: 15px 0;
+    gap: 5px;
+    .form-group {
+      flex: 1;
+      margin-top: 0 !important;
+      padding: 0;
+      label {
+        display: none;
+      }
+    }
+    button {
+      padding: 6px 15px;
+    }
+  }
+}
+
+.view-summary-container {
+  .header-section {
+    @include flexBox();
+    gap: 15px;
+    .section { flex: 1; }
+    .summary-details {
+      @include makeBox();
+      h6 { font-size: 18px; padding: 10px 0;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #f1f1f1; }
+      .actions {
+        @include flexBox();
+        gap: 15px;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #f1f1f1;
+      }
+    }
+  }
+}

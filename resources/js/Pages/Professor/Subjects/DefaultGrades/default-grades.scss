@@ -1,0 +1,43 @@
+@import "../../../../assets/css/global";
+
+.default-grades-container {
+  @include flexBox();
+  margin-top: 15px;
+  gap: 15px;
+  h6 {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 15px;
+  }
+  .form-container {
+    flex: 1.5;
+    .form-group:first-of-type { margin-top: 0; }
+  }
+  .left-grades {
+    @include makeBox();
+    flex: 1;
+    ul {
+      li {
+        @include flexBox(space-between);
+        padding: 10px;
+        font-size: 13px;
+        span:last-of-type { color: $green-dark; font-weight: bold }
+      }
+    }
+  }
+  .right-data {
+    @include makeBox();
+    flex: 1;
+    .links {
+      @include flexBox();
+      gap: 15px;
+      padding: 10px 0 0;
+      border-top: 1px solid #f1f1f1;
+      margin-top: 18px;
+      a { font-size: 15px }
+    }
+  }
+}

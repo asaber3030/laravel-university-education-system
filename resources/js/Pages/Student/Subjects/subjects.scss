@@ -1,0 +1,257 @@
+@import "../../../assets/css/global";
+
+// /students/subjects/
+.subjects-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  .subject {
+    @include boxShadow();
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    .header {
+      text-align: center;
+      a {
+        display: block;
+        margin: 10px auto 0;
+        font-size: 22px;
+        font-weight: bold;
+        color: #444;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        font-family: $code-font;
+        color: gray;
+      }
+    }
+    .content {
+      padding-top: 10px;
+      margin-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-top: 1px solid #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .actions {
+      @include flexBox(flex-end);
+      gap: 4px;
+      a {
+        display: block;
+        svg {
+          margin-right: 0 !important; }
+      }
+    }
+  }
+}
+
+// /students/subjects/view/{subject}
+.view-subject-container {
+  .display-subject-details {
+    @include makeBox();
+    margin: 15px 0;
+    border-bottom: 1px solid #ddd;
+    .details-header {
+      @include flexBox(space-between, center);
+      img { width: 50px; height: 50px; object-fit: contain; border-radius: 5px; }
+      img { width: 50px; height: 50px; object-fit: contain; border-radius: 5px; }
+      h6 {
+        @include flexBox(space-between, center);
+        font-size: 18px;
+        span:last-of-type { color: gray; font-size: 14px; }
+
+      }
+      > div {
+        @include flexBox(flex-start, center);
+        gap: 15px;
+      }
+    }
+    > p {
+      font-size: 14px;
+      color: #777;
+      line-height: 2;
+      margin: 15px 15px 0;
+    }
+  }
+  .nav-link {
+    border-radius: 3px;
+    padding: 5px 15px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .nav-pills {
+    @include makeBox();
+  }
+  .nav-link.active { background-color: #0B5ED7; }
+  .default-tab-content {
+    @include boxShadow();
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    .chapter-header {
+      padding: 15px 5px;
+      border-bottom: 1px solid #f1f1f1;
+      margin-bottom: 10px;
+      h5 {
+        @include flexBox(space-between, center);
+        font-size: 18px;
+        span {
+          font-weight: bold;
+          padding: 10px 8px;
+          background-color: #222;
+          color: lightgray;
+          font-size: 14px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .chapter-content {
+      padding: 10px;
+      p {
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        font-size: 14px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f1f1f1;
+      }
+    }
+    .chapter-footer {
+      padding: 0 10px;
+      .actions {
+        @include flexBox();
+        gap: 5px;
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: 1px solid #f1f1f1;
+      }
+    }
+  }
+  .default-subject-grades {
+    margin-top: 15px;
+    h6 {
+      margin: 15px 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: #888;
+    }
+  }
+}
+
+// /students/subjects/view/{subject}/course
+.view-subject-course {
+  .header {
+    @include makeBox();
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    h6 {
+      @include flexBox(space-between, center);
+      font-size: 16px;
+      span { font-size: 13px; color: gray; }
+    }
+    p {
+      color: gray;
+      line-height: 1.7;
+      margin: 10px 5px 0;
+      overflow-wrap: break-word;
+    }
+  }
+  .content {
+    margin-top: 25px;
+    .lectures-list {
+      @include boxShadow();
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      h6 {
+        @include flexBox(center, center);
+        margin: 15px;
+        font-size: 16px;
+        color: #555;
+        font-weight: 600;
+        text-align: center;
+        gap: 5px;
+        span { color: gray; font-size: 11px; }
+      }
+      .nav-link {
+        margin-bottom: 5px;
+        color: #777;
+        font-size: 13px;
+        padding: 5px 15px;
+        @include flexBox(space-between, center);
+        span:last-of-type { font-size: 10px; }
+        &.active { color: #FFF; }
+        &:hover { background-color: #0B5ED7; color: #FFF; }
+      }
+    }
+    .lecture-content-tab {
+      .lecture-header {
+        @include flexBox(space-between, center);
+        gap: 5px;
+        h5 { font-size: 18px; }
+        a {
+          margin-right: 3px;
+          svg { margin-right: 0 !important; }
+        }
+      }
+      .lecture-video {
+        margin: 10px 0;
+        border-radius: 5px;
+        overflow: hidden;
+        video {
+          width: 100%;
+        }
+      }
+      .lecture-description {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #e5e5e5;
+        p {
+          color: gray;
+          line-height: 1.7;
+          margin: 10px 5px;
+          overflow-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+
+
+.list-other-subject-summaries {
+  @include flexBox();
+  gap: 25px;
+  .filter {
+    @include makeBox();
+    .form-group:first-of-type { margin-top: 0 !important; }
+    .btn:not(.disable-styles) {
+      color: #333;
+      background-color: transparent;
+      border: none;
+      font-weight: 400;
+      padding: 5px 0;
+      &:hover { text-decoration: underline; }
+    }
+    .disable-styles {
+      display: block;
+      width: 100%;
+    }
+    select {
+      font-size: 14px;
+      padding: 5px 15px;
+      border-radius: 4px;
+      &:focus, &:hover { box-shadow: none; border-color: $blue-dark; }
+    }
+    flex: 1.5;
+    input, select { width: 100%; }
+  }
+  .summaries-details {
+    flex: 4;
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+  }
+}

@@ -1,0 +1,552 @@
+@import "global";
+body {
+  padding-left: 15%;
+}
+img {
+  border-radius: 5px !important;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  line-height: 1;
+}
+::-webkit-scrollbar, ::-webkit-scrollbar-thumb  {
+}
+.main-content::-webkit-scrollbar {
+  background-color: #222;
+  width: 8px;
+  display: block !important;
+}
+.main-content::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 15px;
+  display: block !important;
+}
+
+.MuiDataGrid-root {
+  background-color: #FFF;
+  border-radius: 8px !important;
+  overflow: hidden;
+  @include boxShadow(3px);
+}
+.MuiDataGrid-columnHeaderTitle {
+  font-weight: bold !important;
+}
+.MuiDataGrid-cell {
+  border-right: 1px solid #ddd;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: auto;
+  }
+  .badge {
+    margin-right: 5px;
+  }
+  .size-badge {
+    padding: 6px 15px;
+    color: gray;
+    border-radius: 0;
+    font-size: 10px;
+    background-color: transparent;
+    border: 1px solid #ddd !important;
+  }
+  .no-design {
+    color: $red-dark;
+  }
+}
+.MuiDataGrid-columnHeaderTitleContainer {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+.MuiDataGrid-iconSeparator {
+  display: none !important;
+}
+.MuiDataGrid-columnHeader {
+  border-right: 1px solid #ddd;
+}
+
+.table-actions {
+  @include flexBox();
+  gap: 5px;
+  a {
+    background-color: #222 !important;
+    border: none;
+    color: lightgray;
+    &:hover { background-color: #333 !important; }
+    svg { margin: 0 !important; }
+  }
+}
+
+.form-file-group {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 10px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  @include boxShadow(3px);
+  svg { font-size: 40px; margin: 10px 0 }
+  label {
+    font-size: 18px;
+  }
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10000;
+  }
+}
+
+// Custom Dropdown
+.custom-dropdown {
+  position: relative;
+  &:hover .dropdown-content { display: block; }
+  .dropdown-content {
+    @include boxShadow(5px);
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    padding: 10px 0;
+    background-color: #FFF;
+    min-width: 350px;
+    left: -310px;
+    border-radius: 5px;
+    a {
+      display: block;
+      padding: 5px 8px;
+      border-radius: 3px;
+      margin: 3px 10px;
+      font-size: 14px;
+      color: #333;
+      @include flexBox(flex-start, center);
+      svg { flex: 1; }
+      span { flex: 8; }
+      &:hover {
+        background-color: $blue-light;
+        color: #fff;
+      }
+    }
+    hr { color: #ddd; margin: 8px 0; }
+  }
+}
+
+@for $i from 1 through 1000 {
+  .truncate-#{$i} {
+    @include truncate($i + #{px});
+  }
+}
+:host  .ck-editor__editable_inline {
+  min-height: 500px !important;
+}
+
+.ck-editor__editable_inline {
+  min-height: 300px;
+}
+
+.mail-paragraph {
+  margin: 15px 0 !important;
+}
+
+.delete-alert {
+  @include makeBox();
+  position: relative;
+  .image {
+    img {
+      width: 60px;
+      height: 60px;
+      margin: 5px auto;
+    }
+  }
+  .text {
+    margin-top: 10px;
+    text-align: center;
+    .header {
+      color: #555;
+      margin: 10px 0;
+    }
+    p {
+      color: #555;
+      margin: 0 0 5px 0;
+      font-size: 15px;
+    }
+  }
+  .footer {
+    @include flexBox(flex-end, center);
+    align-content: center;
+    gap: 5px;
+    padding: 15px 0 0;
+  }
+}
+
+ul { padding: 0; }
+
+.code-font {
+  font-family: 'Fira Code', sans-serif;
+  font-weight: 600;
+}
+
+.bg-green {
+  background-color: #efffd5 !important;
+}
+.bg-red {
+  background-color: #ffc5c5 !important;
+}
+
+.alert-sm {
+  padding: 10px 18px !important;
+  border-radius: 3px !important;
+  margin: 10px 0;
+  font-size: 13px !important;
+}
+
+// Student name
+.student-name-span {
+  @include flexBox(center, center);
+  font-size: 15px;
+  border-radius: 5px;
+  .inner-student-name {
+    padding: 10px 15px;
+    border-radius: 5px 0 0 5px;
+    display: block;
+    background-color: #3498db;
+    border-right: 1px solid #fff;
+  }
+  .inner-student-id {
+    border-radius: 0 5px 5px 0;
+    padding: 10px 8px;
+    background-color: #1a5e8b;
+    a { color: #FFF; }
+  }
+}
+
+.list-items {
+  ul {
+    padding: 0;
+    hr {
+      margin: 10px 0;
+      color: #ddd;
+    }
+    li {
+      @include flexBox(space-between, center);
+      padding: 5px 0;
+      font-size: 13px;
+      span:last-of-type { font-weight: 600 }
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .actions-links {
+    @include flexBox();
+    padding: 10px 0 0;
+    gap: 10px;
+    a { display: block; width: 100%; margin: 0; }
+  }
+}
+
+.student-card {
+  @include flexBox();
+  @include boxShadow(3px);
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  gap: 15px;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  span { display: block; line-height: 1; }
+  span > span { color: gray; font-size: 14px; margin-top: 5px }
+  &.remove-bg-student {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 15px 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+.MuiTablePagination-displayedRows, .MuiTablePagination-selectLabel {
+  margin-bottom: 0 !important;
+}
+
+.disabled-input {
+  cursor: not-allowed !important;
+  background-color: #ddd !important;
+}
+
+.form-disbaled {
+  input {
+    background-color: #ddd;
+    cursor: not-allowed;
+    user-select: none;
+    &:read-only {
+      border-color: #e5e5e5;
+    }
+  }
+}
+
+.default-title {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #555;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.table {
+  @include boxShadow(3px);
+  background-color: #FFF;
+  width: 100% !important;
+}
+
+
+.switch-container {
+  @include flexBox(flex-start, center);
+  gap: 10px;
+  margin: 12px 0;
+  .switch-text { font-weight: 600 }
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+// Import file
+.import-excel {
+  @include makeBox();
+  padding: 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .container-file {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    cursor: pointer;
+    input {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .text-box {
+    padding: 10px 25px;
+    text-align: center;
+    h1 {
+      font-size: 25px;
+      margin: 15px 0;
+    }
+  }
+}
+
+// error box
+.error-box {
+  @include flexBox(flex-start, center);
+  gap: 20px;
+  background-color: #111;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #999;
+  svg { font-size: 25px; }
+  .boxes {
+    display: flex;
+    gap: 5px;
+    font-size: 15px;
+    .box {
+      background-color: #222;
+      padding: 5px;
+      border-radius: 5px;
+      color: #888;
+      font-size: 11px;
+      max-width: 50px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.badge-warning {
+  background-color: $yellow-light;
+}
+.badge-error {
+  background-color: $red-light;
+}
+.badge-success {
+  background-color: $green-light;
+}
+.badge-primary {
+  background-color: $blue-dark;
+}
+.badge {
+  border-radius: 3px;
+}
+
+.hd-ac-btn {
+  display: none;
+}
+
+.make-link {
+  color: $blue-light;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px 0 0;
+  user-select: none;
+  &:hover { text-decoration: underline }
+}
+
+.questions-builder {
+  label { display: none; }
+  input {
+    padding: 5px 10px;
+    font-size: 15px;
+
+  }
+  .header {
+    @include flexBox(space-between, center);
+
+    h6 {
+      font-size: 14px;
+    }
+
+  }
+  .all-questions {
+    margin-top: 10px;
+    .question {
+      @include makeBox();
+      margin: 5px 0;
+      .question-title {
+        @include flexBox(flex-start, center);
+        gap: 10px;
+        h6 { font-size: 14px; flex: 1; }
+        input { flex: 1; }
+      }
+      .question-mcq {
+        padding: 10px 25px;
+        .mcq {
+          @include flexBox(space-between, center);
+          @include boxShadow(2px);
+          padding: 10px 25px;
+          background-color: #f1f1f1;
+          border-radius: 5px;
+          h6 { font-size: 14px; flex: 1; }
+          input { flex: 4; }
+
+        }
+      }
+    }
+  }
+}
+
+.page-header {
+  .page-header-top {
+    @include flexBox(space-between, center);
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    h6 { font-size: 18px; }
+    .left-items {
+      @include flexBox(flex-start, center);
+      gap: 5px;
+    }
+    .right-items {
+      label { display: none; }
+    }
+  }
+}
+
+@mixin createUserCard($imageDimensions: 50px, $gap: 15px, $justify: flex-start, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  .image {
+    img {
+      object-fit: fill;
+      width: $imageDimensions;
+      height: $imageDimensions;
+      border-radius: 50% !important;
+    }
+  }
+  .text {
+    h6 {
+      font-size: 15px;
+    }
+    span {
+      font-size: 12px;
+      color: gray;
+      font-weight: 500;
+    }
+  }
+}
+
+.user-card {
+  @include createUserCard();
+}

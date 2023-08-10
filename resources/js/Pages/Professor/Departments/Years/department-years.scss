@@ -1,0 +1,54 @@
+@import "../../../../assets/css/global";
+
+.studying-years {
+  @include gridBox(2);
+  margin-top: 15px;
+  .year-container {
+    @include makeBox();
+    padding-bottom: 10px;
+    .year-title {
+      @include flexBox(space-between, center);
+      font-size: 16px;
+      color: #666;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f1f1f1;
+      a { color: $blue-dark; &:hover { text-decoration: underline; } }
+      span { font-size: 14px; color: gray; }
+    }
+    .list-year-information {
+      .list-items { padding: 0; }
+    }
+    .list-subjects {
+      @include flexBox(center);
+      border-top: 1px solid #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+      padding: 10px 0;
+      margin: 10px 0;
+      gap: 10px;
+      .alert {
+        width: 100%;
+        margin: 0;
+      }
+      .subject {
+        @include transition();
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid #f1f1f1;
+        padding: 6px 10px;
+        flex: 1;
+        font-size: 14px;
+        color: #555;
+        &:hover { background-color: #333; color: lightgray; border-color: #333; }
+      }
+    }
+    .year-actions {
+      @include flexBox();
+      > div {
+        padding: 0 5px;
+        a { line-height: 1; padding: 6px 10px; }
+        &:not(:last-of-type) { border-right: 1px solid #f1f1f1; }
+        &:first-of-type { padding-left: 0; }
+      }
+    }
+  }
+}

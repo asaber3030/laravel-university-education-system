@@ -1,0 +1,82 @@
+@import "../../../assets/css/global";
+
+.list-years {
+  .department {
+    @include makeBox();
+    height: fit-content;
+    margin-bottom: 10px;
+    .department-header {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .years {
+      margin-top: 10px;
+      .year {
+        display: block;
+        color: #444;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        margin-bottom: 4px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        &:hover { background-color: #ddd; }
+      }
+    }
+  }
+}
+
+
+.list-timetable-events {
+  margin-top: 25px;
+  .days {
+    .day {
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #ddd;
+      }
+      .header-container {
+        @include flexBox(space-between, flex-end);
+        a.btn {
+          margin-bottom: 10px;
+        }
+      }
+      .day-header {
+        @include makeBox();
+        background-color: #0B5ED7;
+        width: fit-content;
+        margin-bottom: 15px;
+        text-align: center;
+        h6, span { color: #fff !important }
+        h6 {
+          font-weight: bold;
+          gap: 5px;
+          @include flexBox(center, center);
+          span {
+            color: #000 !important;
+            font-size: 11px;
+          }
+        }
+      }
+      .day-events {
+        .event {
+          background-color: #FFF;
+          padding: 5px 15px;
+          display: grid;
+          margin-bottom: 7px;
+          border-radius: 5px;
+          border: 1px solid #ddd;
+          grid-template-columns: repeat(5, 1fr);
+          .action {
+            @include flexBox();
+            gap: 8px;
+          }
+          .title {
+            font-weight: bold
+          }
+        }
+      }
+    }
+  }
+}

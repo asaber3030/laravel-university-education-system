@@ -1,0 +1,25 @@
+@import "../../../assets/css/global";
+
+.dashboard-container {
+
+  .dashboard-header {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    .link-section {
+      color: #ddd;
+      padding: 25px;
+      border-radius: 4px;
+      background-color: #333;
+      @include flexBox(flex-start, center);
+      .section-left {
+        flex: 1;
+        svg { font-size: 30px; }
+      }
+      .section-right {
+        flex: 1.5;
+      }
+    }
+  }
+
+}

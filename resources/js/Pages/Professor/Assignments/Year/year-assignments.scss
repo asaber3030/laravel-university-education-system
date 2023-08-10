@@ -1,0 +1,80 @@
+@import "../../../../assets/css/global";
+
+.all-assignments {
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  margin-top: 15px;
+
+  .left-data {
+
+    .department {
+      margin: 8px 0;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 10px;
+      }
+      .dep-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+        a { color: #444; &:hover { text-decoration: underline } }
+      }
+      ul {
+        li {
+          a {
+            display: block;
+            font-size: 12px;
+            padding: 6px 25px;
+            background-color: #333;
+            color: lightgray;
+            margin: 5px 0;
+            border-radius: 5px;
+            &:hover { background-color: #222; }
+            &.active { background-color: $blue-dark; }
+          }
+        }
+      }
+    }
+  }
+
+  .right-data {
+    padding-left: 15px;
+    border-left: 1px solid #e5e5e5;
+    .default-title {
+      border-bottom-color: #e5e5e5;
+    }
+
+    .assignments-list {
+      @include flexBox();
+      gap: 15px;
+      .assignment {
+        @include boxShadow(3px);
+        flex: 1;
+        background-color: #fff;
+        padding: 10px 25px;
+        border-radius: 5px;
+        .year-title {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+        ul {
+          li {
+            @include flexBox(space-between, center);
+            > a {
+              padding: 5px 0;
+              font-size: 13px;
+              border-radius: 5px;
+            }
+            .actions {
+              @include flexBox();
+              gap: 10px;
+              a { color: #222; }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

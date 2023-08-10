@@ -1,0 +1,30 @@
+@import "../../../assets/css/global";
+
+.announcements-container {
+  .ann {
+    @include makeBox();
+    display: grid;
+    grid-template-columns: .5fr 12fr;
+    gap: 25px;
+    margin-bottom: 5px;
+    .left {
+      text-align: center;
+      img { width: 60px; margin: 10px auto 0; height: 60px; object-fit: contain; border-radius: 5px; }
+      a { font-size: 13px; }
+    }
+    .right {
+      h6 {
+        font-size: 20px;
+      }
+      span {
+        font-size: 14px;
+        color: gray;
+      }
+      p {
+        word-break: break-word;
+        font-size: 16px;
+        margin: 5px 0 0;
+      }
+    }
+  }
+}

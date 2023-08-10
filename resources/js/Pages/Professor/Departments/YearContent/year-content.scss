@@ -1,0 +1,71 @@
+@import "../../../../assets/css/global";
+
+.year-content-subjects {
+  @include gridBox(3);
+  margin-top: 10px;
+  .course-content {
+    @include makeBox();
+    padding-top: 10px;
+    height: fit-content;
+    .course-header {
+      @include flexBox(space-between, center);
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #f1f1f1;
+      h6 {
+        font-size: 16px;
+        padding: 0 !important;
+        margin: 0 !important;
+        a { color: #555; &:hover { color: $blue-dark; text-decoration: underline; } }
+      }
+      .subject-actions {
+        @include flexBox();
+        gap: 5px;
+        a { padding-right: 2px }
+      }
+    }
+    .alert-chapters {
+      margin: 0;
+      a {
+        svg { margin: 0 1px 0 5px !important; }
+      }
+    }
+    .list-chapters {
+      padding: 0;
+      li {
+        @include flexBox(space-between);
+        font-size: 14px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        padding: 5px 15px !important;
+        color: #666;
+        margin: 5px 0;
+        box-shadow: 0 2px 1px #e5e5e5;
+      }
+    }
+    .additional-details-container {
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid #f1f1f1;
+      >h6 { font-size: 15px; color: #666; margin: 0 0 10px 0; }
+      ul {
+        li {
+          @include flexBox(space-between);
+          font-size: 13px;
+          margin: 0 8px;
+          padding: 6px 0;
+          &:not(:last-of-type) { border-bottom: 1px solid #f1f1f1; }
+          &:last-of-type { padding-bottom: 0; }
+        }
+      }
+    }
+    .semester-actions {
+      @include flexBox();
+      padding-top: 10px;
+      margin-top: 10px;
+      border-top: 1px solid #f1f1f1;
+      gap: 5px;
+      a { padding: 8px 10px; line-height: 1; font-size: 13px; }
+    }
+  }
+}

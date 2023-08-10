@@ -1,0 +1,54 @@
+@import "../../../../assets/css/global";
+
+.promote-students {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  margin: 20px 0;
+  .default-section {
+    @include makeBox();
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    .default-title { font-size: 13px; svg { margin-right: 5px; }  text-align: center; }
+  }
+  .next-semester-info, .succeeded-students {
+    ul {
+      h6 {
+        font-size: 14px;
+        padding-bottom: 10px;
+        margin: 20px 14px 5px !important;
+      }
+      li {
+        @include flexBox(space-between);
+        font-size: 13px;
+        padding: 5px 15px;
+        span:last-of-type { font-weight: bold; }
+        &:last-of-type { padding-bottom: 0; }
+      }
+    }
+    .actions {
+      @include flexBox();
+      gap: 5px;
+      border-top: 1px solid #f1f1f1;
+      padding: 10px 15px 0;
+      margin-top: 10px;
+      a { font-size: 14px; }
+    }
+  }
+  .list-succeeded-students {
+    table {
+      th, td { font-size: 14px; }
+      td { font-size: 12px; }
+    }
+  }
+}
+
+.alert {
+  ul {
+    padding: 10px 35px 0;
+    list-style: -moz-ethiopic-numeric;
+    li {
+      line-height: 2;
+    }
+  }
+}

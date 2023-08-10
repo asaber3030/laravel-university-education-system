@@ -1,0 +1,190 @@
+@import "../../../assets/css/global";
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 25px;
+  .left-profile {
+    .profile-header {
+      @include flexBox(flex-start, center);
+      gap: 15px;
+      margin-bottom: 10px;
+      img { width: 60px; height: 60px; object-fit: contain;}
+      h6 { font-size: 15px; }
+      span { font-size: 13px; }
+    }
+    .profile-urls {
+      @include makeBox();
+      padding: 5px 0;
+      a {
+        display: block;
+        padding: 5px 15px;
+        color: #333;
+        margin-bottom: 3px;
+        font-size: 14px;
+        &:hover, &.active { background-color: #333; color: #FFF; }
+
+      }
+    }
+  }
+}
+
+.main-profile {
+  @include makeBox();
+  .header {
+    @include flexBox(space-between);
+    .left-header {
+      @include flexBox(flex-start, center);
+      gap: 15px;
+      margin-bottom: 10px;
+      img { width: 60px; height: 60px; object-fit: contain;}
+      h6 { font-size: 15px; }
+      span { font-size: 13px; }
+    }
+    .right-header {
+      span { display: block; color: gray; svg { margin-right: 5px } }
+    }
+  }
+
+  .details {
+    padding: 15px 15px 0;
+    span { display: block; line-height: 2; font-size: 14px; }
+  }
+}
+
+
+.update-profile {
+  width: 55%;
+}
+
+.display-badges {
+  .badges {
+    @include flexBox();
+    gap: 5px;
+    .badge {
+      @include makeBox();
+      img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+      }
+      h6 { color: #666; margin: 5px 0 }
+      span { color: gray; font-weight: lighter; font-size: 12px; }
+    }
+  }
+}
+
+.display-notifications {
+  .notifications {
+    .notification {
+      @include makeBox();
+      @include flexBox(flex-start, center);
+      position: relative;
+      gap: 25px;
+      margin-bottom: 5px;
+      .left-image {
+        img {
+          padding: 10px;
+          border-radius: 5px;
+          &:hover { background-color: #f1f1f1; }
+          width: 70px;
+          height: 70px;
+          border-radius: 5px;
+          object-fit: contain;
+        }
+      }
+      .right-details {
+        h6 { font-size: 14px; font-weight: 800; }
+        p { margin: 5px 0 0; color: gray; font-size: 12px; }
+        span {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.study-content-all {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    .year-details {
+      @include makeBox();
+      height: fit-content;
+      .header {
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #f1f1f1;
+        border-radius: 5px;
+        svg { margin: 0 0 15px 0; font-size: 24px }
+        h6 {
+          font-size: 17px;
+        }
+        span {
+          margin: 0; font-size: 13px;
+        }
+      }
+      .list-subjects {
+
+        margin-top: 11px;
+        .subject {
+          background-color: #f1f1f1;
+          padding: 4px 16px;
+          font-size: 13px;
+          border-radius: 5px;
+          margin-bottom: 5px;
+          border: 1px solid #ddd;
+        }
+      }
+      .footer {
+        .actions {
+          @include flexBox();
+          gap: 5px;
+          padding: 10px 0 0;
+          border-top: 1px solid #f1f1f1;
+          margin-top: 10px;
+        }
+      }
+      &.active-year {
+        .header {
+          background-color: #1da1f2;
+        }
+      }
+    }
+  }
+}
+
+.view-report-container {
+  .report-sender {
+    .professor-answer {
+      margin: 15px;
+      .answer-title {
+        @include flexBox(space-between, center);
+        font-size: 18px;
+        span { color: gray; font-size: 13px; }
+      }
+      .answer-description {
+        font-size: 15px;
+        margin: 15px;
+      }
+    }
+  }
+  .report-content {
+    @include makeBox();
+    margin: 15px 0;
+    .report-title {
+      @include flexBox(space-between, center);
+      font-size: 20px;
+      margin-left: 10px;
+      span { color: gray; font-size: 13px; }
+    }
+    .report-description {
+      font-size: 15px;
+      margin: 7px 25px 0;
+      line-height: 2;
+    }
+  }
+}

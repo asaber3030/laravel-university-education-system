@@ -1,0 +1,19 @@
+@import "../../../../assets/css/global";
+
+.add-students-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 25px;
+  .add-form {
+
+  }
+  .add-semester {
+    padding: 35px 0;
+    .add-semester-header {
+      border-bottom: 1px solid #e5e5e5;
+      h5 { font-size: 18px; }
+      @include flexBox(space-between, center);
+
+    }
+  }
+}

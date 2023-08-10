@@ -1,0 +1,17 @@
+@import "../../../assets/css/global";
+body {
+  padding-left: 0 !important;
+  background-color: #f1f1f1;
+}
+.login-form {
+  @include makeBox();
+  width: 45%;
+  margin: 140px auto;
+
+  > h1 {
+    margin: 10px 0 25px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+}

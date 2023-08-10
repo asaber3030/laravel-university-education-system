@@ -1,0 +1,154 @@
+@import '../../../../assets/css/global';
+
+.group-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+  .list-links {
+    .link-section {
+      @include boxShadow(3px);
+      @include transition();
+      background-color: #FFF;
+      padding: 12px;
+      border-radius: 5px;
+      margin: 10px 0;
+      text-align: center;
+      cursor: pointer;
+      display: block;
+      user-select: none;
+      &:hover { background-color: #ddd; }
+      &.active { background-color: $blue-dark; h6 { color: #FFF; } &:hover { background-color: $blue-dark; } }
+      img {
+        width: 50px;
+        height: 50px;
+        margin: 12px auto;
+      }
+      h6 {
+        font-size: 15px;
+        font-weight: 900;
+        color: #555;
+      }
+    }
+  }
+
+  .group-details {
+    .default-section {
+      padding: 10px;
+      .default-title { border-bottom-color: #e5e5e5; }
+      label, .switch-text, input, textarea { font-size: 12px !important; }
+    }
+    .course-details-div {
+      background-color: #FFF;
+      border-radius: 5px;
+      padding: 10px;
+      @include boxShadow(3px);
+    }
+    .assignment-details {
+      padding: 15px 0;
+      .assignment-title {
+        font-size: 16px;
+        font-weight: 800;
+        margin: 0 0 10px;
+      }
+      > p {
+        color: gray;
+        width: fit-content;
+        word-break: break-all;
+        font-size: 13px;
+        line-height: 1.5; padding: 0 15px;
+      }
+      .professor {
+        @include makeBox();
+        @include flexBox(flex-start, center);
+        gap: 10px;
+        img { width: 40px; height: 40px }
+        h6 { font-size: 15px; span { font-size: 13px; color: #666; display: block } }
+      }
+      .d-flex {
+        gap: 10px;
+        > div { flex: 1; }
+      }
+      .file-download,
+      .link {
+        @include makeBox();
+        h6 { font-size: 15px; color: #555; margin-bottom: 8px; }
+        a {
+          line-height: 1;
+          padding: 6px;
+          font-size: 13px;
+          margin-right: 5px;
+        }
+      }
+
+
+
+      .course-details {
+        @include makeBox();
+        margin-top: 10px;
+      }
+
+      .chapters-group {
+        @include flexBox();
+        .chapters, .lectures {
+          width: fit-content;
+          padding: 10px;
+          flex: 1;
+          .title-gr {
+            color: #666;
+            margin: 10px 0;
+            font-size: 14px;
+          }
+          .lecture, .chapter {
+            @include boxShadow(3px,#DDD);
+            margin: 5px 0;
+            padding: 5px 15px;
+            font-size: 13px;
+            background-color: #f1f1f1;
+
+          }
+        }
+      }
+    }
+    .settings-preview-page {
+      .item-select-box {
+        display: flex;
+        gap: 8px;
+        .form-group {
+          flex: 1;
+        }
+      }
+    }
+    .answers-div {
+      .tabs {
+        @include flexBox();
+        gap: 10px;
+        margin-bottom: 15px;
+        .tab {
+          @include makeBox();
+          flex: 1;
+          cursor: pointer;
+          text-align: center;
+          font-size: 15px;
+          user-select: none;
+          svg { display: block; margin: 10px auto; font-size: 25px; }
+          &:first-of-type { background-color: #FFF; &.active { background-color: $green-dark; color: #FFF; } }
+          &:last-of-type { background-color: #FFF; &.active { background-color: $yellow-dark; color: #FFF;  } }
+        }
+      }
+      .assignments-list {
+        table {
+          th, td { font-size: 13px }
+          td {
+            a {
+              line-height: 1;
+              padding: 5px;
+              margin-right: 3px;
+              svg { margin-right: 0 !important; }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

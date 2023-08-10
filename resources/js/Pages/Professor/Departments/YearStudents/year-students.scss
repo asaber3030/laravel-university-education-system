@@ -1,0 +1,19 @@
+@import "../../../../assets/css/global";
+
+.listing-students-info {
+  @include flexBox();
+  gap: 10px;
+  .def-section {
+    @include makeBox();
+    flex: 1;
+    .list-ss-courses {
+      li {
+        padding: 5px 10px;
+        background-color: #f6f6f6;
+        margin: 5px 0;
+        border-radius: 5px;
+        box-shadow: 0 2px 1px #ddd;
+      }
+    }
+  }
+}

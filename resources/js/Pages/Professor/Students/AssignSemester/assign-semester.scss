@@ -1,0 +1,37 @@
+@import "../../../../assets/css/global";
+
+.assign-semester-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+
+  .left-semester-assign {
+
+  }
+
+  .right-information {
+    .default-box {
+      @include makeBox();
+      box-shadow: 0 2px 3px #ddd !important;
+      margin: 10px 0;
+    }
+    .courses {
+      @include flexBox();
+      gap: 5px;
+      .course {
+        margin: 5px 0;
+        a {
+          @include makeBox();
+          @include transition();
+          padding: 8px 15px;
+          span { margin-left: 8px; color: gray; }
+          &:hover {
+            background-color: #222;
+            color: #FFF
+          }
+        }
+      }
+    }
+  }
+
+}

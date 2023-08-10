@@ -1,0 +1,41 @@
+@import "../../../../assets/css/global";
+
+.quiz-all-answers {
+  table {
+    th, td {
+      font-size: 13px !important;
+    }
+    .actions-th {
+      @include flexBox();
+      gap: 2px;
+      svg { margin-right: 0 !important; font-size: 13px; }
+    }
+  }
+  .quiz-details {
+    @include makeBox();
+    @include flexBox();
+    gap: 16px;
+    margin-top: 10px;
+    .quiz-left-details {
+      flex: 1;
+      padding-right: 10px;
+      border-right: 1px solid #f1f1f1;
+    }
+    .quiz-right-details {
+      flex: 1;
+    }
+    .quiz-subject-details {
+      h6 { font-size: 15px; margin: 15px 0 10px 0 !important; }
+      ul {
+        li {
+          background-color: #f1f1f1;
+          padding: 5px;
+          margin: 5px 0;
+          border-radius: 5px;
+          box-shadow: 0 2px 1px #ddd;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

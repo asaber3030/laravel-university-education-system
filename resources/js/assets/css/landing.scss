@@ -1,0 +1,90 @@
+@import "global";
+
+body {
+  background-color: #f7f7f7;
+}
+
+.welcome-page-container {
+  .header {
+    @include flexBox(space-between, center);
+    padding: 15px 30px;
+    background-color: #fff;
+    margin-bottom: 190px;
+    h4 {
+      font-weight: 900;
+      &:after {
+        content: "";
+        width: 35px;
+        height: 3px;
+        background-color: $blue-dark;
+        display: block;
+        border-radius: 5px;
+      }
+      a { color: #444;  }
+    }
+    .links {
+      @include flexBox();
+      gap: 7px;
+      a {
+        @include transition();
+        color: #333;
+        display: block;
+        padding: 4px 15px;
+        font-size: 14px;
+        border-radius: 3px;
+        border: 1px solid #444;
+        &:hover { background-color: #444; color: #fff; }
+      }
+    }
+  }
+  .page-content {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 15px;
+    @include flexBox(center, center);
+    gap: 100px;
+    h5 {
+      font-size: 20px;
+      font-weight: 700;
+      b {
+        color: $blue-dark;
+      }
+    }
+    p {
+      color: gray;
+      font-size: 14px;
+      margin: 5px 0 !important;
+    }
+    .main-l {
+      width: 400px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin: 30px 0;
+      .feature {
+        display: block;
+        margin-bottom: 20px;
+        img {
+          width: 55px;
+          margin: auto;
+        }
+        h6 {
+          font-weight: bold;
+          color: #444;
+          font-size: 14px;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  .page-footer {
+    @include flexBox();
+    text-align: center;
+    gap: 3px;
+    a {
+      width: 200px;
+    }
+  }
+}

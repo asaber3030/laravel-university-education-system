@@ -1,0 +1,40 @@
+@import "../../../assets/css/global";
+
+.semesters-list-container {
+  .header-view {
+    button.active { background-color: #444; }
+  }
+  .table-view {
+    margin: 15px 0;
+  }
+  .list-view {
+    margin-top: 20px;
+    .list-sems {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      .semester {
+        @include makeBox();
+        .semester-header {
+          padding: 15px;
+          text-align: center;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #f1f1f1;
+          h6 { font-size: 15px; }
+          span { color: gray; margin-top: 10px; display: block; }
+        }
+        .semester-footer {
+          @include flexBox();
+          margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px solid #f1f1f1;
+          gap: 5px;
+        }
+      }
+    }
+  }
+}
+
+.view-semester-grades {
+
+}

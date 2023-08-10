@@ -1,0 +1,81 @@
+@import "../../../../assets/css/global";
+
+// assignments/{year}/new
+.new-assignments-container {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 15px;
+  .choice-group {
+    h6 {
+      font-size: 15px;
+      color: #444;
+    }
+    .group-in {
+      h6 {
+        cursor: pointer;
+        color: #1da1f2;
+        &:hover { text-decoration: underline }
+      }
+    }
+  }
+  .list-courses {
+    @include flexBox();
+    gap: 5px;
+    margin-top: 10px;
+    .course {
+      padding: 7px 10px;
+      border-radius: 5px;
+      background-color: #222;
+      display: block;
+      cursor: pointer;
+      h6 {
+        color: lightgray;
+        font-size: 0.875rem;
+        svg { margin-right: 5px; }
+        span.subj-code { color: gray; font-weight: 700 }
+      }
+      &.active-course {
+        background-color: #444;
+      }
+    }
+  }
+  .right-group {
+    @include makeBox();
+    height: fit-content;
+    span:last-of-type { color: gray; }
+  }
+}
+
+// assignments/choose-year
+.choose-year-container {
+
+  .departments {
+    .department {
+      padding: 5px 0 15px;
+      border-bottom: 1px solid #e5e5e5;
+      .department-title {
+        padding: 10px 0;
+        font-size: 18px;
+      }
+      .years {
+        @include flexBox();
+        gap: 5px;
+        .year {
+          background-color: #222;
+          padding: 8px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          &:hover { background-color: #333; }
+          &.active { background-color: #555; h6 { color: #FFF; } }
+          .year-title {
+            color: lightgray;
+            font-size: 13px;
+            svg { margin-right: 10px; }
+            span { font-weight: 700; color: gray; }
+          }
+        }
+      }
+    }
+  }
+}

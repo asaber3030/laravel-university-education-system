@@ -1,0 +1,52 @@
+@import "../../../../assets/css/global";
+
+.student-answers {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+  .quiz-answers {
+    .student-card { padding: 10px; margin-bottom: 15px; }
+    .actions {
+      @include flexBox();
+      gap: 5px;
+    }
+    .questions {
+      .question {
+        margin: 25px 0;
+        &:not(:last-of-type) { padding-bottom: 15px; border-bottom: 1px solid #e5e5e5; }
+        .question-header {
+          margin-bottom: 10px;
+          .question-title { font-size: 16px; color: #555; margin-bottom: 5px; }
+          img {
+            max-width: 400px;
+            max-height: 400px;
+            margin: 15px 0;
+          }
+        }
+        .question-mcq {
+          .mcq {
+            @include flexBox(flex-start, center);
+            display: block;
+            padding: 5px 15px;
+            border-radius: 5px;
+            background-color: #FFF;
+            box-shadow: 0 2px 3px #ddd;
+            font-size: 14px;
+            margin: 5px 0;
+            &.correct-val-lbl { background-color: #00ff6c2e; svg { color: $green-dark; } }
+            &.wrong-val-lbl { svg { color: $red-dark; } }
+            input { margin-right: 8px; }
+            svg { margin-right: 15px; width: 20px; }
+          }
+        }
+      }
+    }
+  }
+  .quiz-total-details {
+    .student-details {
+      @include makeBox();
+      margin-bottom: 10px;
+    }
+  }
+}

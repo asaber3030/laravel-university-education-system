@@ -1,0 +1,117 @@
+@import "../../../assets/css/global";
+
+// students/assignments
+.list-assignments-all {
+  .list-content {
+    .header-content {
+      h6 { font-size: 15px; }
+    }
+  }
+
+  .list-assignments {
+    @include flexBox(center, center);
+    border-radius: 5px;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 15px;
+    a {
+      @include transition();
+      @include boxShadow();
+      text-align: center;
+      color: #555;
+      gap: 5px;
+      font-size: 18px;
+      min-width: 250px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 15px;
+      &:hover { background-color: #333; color: #FFF; span { color: #FFF; } }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        display: block;
+        margin: 0 auto 5px;
+      }
+      .gray-span { @include transition(); font-size: 12px; color: gray; display: block; font-weight: bold }
+    }
+  }
+
+}
+
+// students/assignments/{assignment}/view
+.view-assignment {
+  .assignment-details {
+    margin: 25px 0;
+    .details-header {
+      @include makeBox();
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      p {
+        margin: 15px 0 0;
+        color: gray;
+        overflow-wrap: break-word;
+      }
+      .warnings {
+        margin: 15px 0;
+        h6 {
+          font-size: 15px;
+        }
+        svg {
+          margin-right: 15px; }
+        .alert {
+          margin-top: 5px;
+          position: relative;
+          p {
+            margin: 0;
+          }
+        }
+        span {
+          font-weight: 500;
+          display: block;
+          margin-top: 10px;
+        }
+      }
+      .actions {
+        @include flexBox();
+        gap: 5px;
+        margin: 15px 0 0;
+        padding-top: 15px;
+        border-top: 1px solid #f1f1f1;
+      }
+    }
+    .list-cols {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      gap: 5px;
+      div {
+        @include makeBox();
+        padding: 8px 15px;
+        font-size: 15px;
+        background-color: #333;
+        color: lightgray;
+        span, a { font-weight: 700 }
+        a { color: #1da1f2; }
+        svg { margin-right: 5px; }
+      }
+    }
+  }
+}
+
+.filter-quizzes {
+  margin: 15px 0;
+  @include flexBox(space-between, center);
+  label { display: none; }
+  .search-handler {
+    @include flexBox(flex-start, center);
+    gap: 5px;
+    padding: 0 !important;
+    margin: 0 !important;
+    button {
+      padding: 6px 15px;
+      svg {
+        margin-right: 0 !important; }
+    }
+  }
+}

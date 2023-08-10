@@ -1,0 +1,12 @@
+@import "../../../assets/css/global";
+
+.filter-data {
+  .group-filter {
+    @include flexBox();
+    gap: 8px;
+    margin: 10px 0;
+    .form-group {
+      flex: 1;
+    }
+  }
+}

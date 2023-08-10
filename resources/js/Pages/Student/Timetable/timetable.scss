@@ -1,0 +1,77 @@
+@import "../../../assets/css/global";
+
+.timetable-view {
+  .days {
+    .day {
+      display: grid;
+      grid-template-columns: 1fr .5fr 4fr;
+      margin-bottom: 15px;
+      align-items: center;
+      gap: 15px;
+      .icon {
+        text-align: center;
+        svg {
+          font-size: 25px;
+        }
+      }
+      .day-text {
+        font-size: 25px;
+        color: #444;
+        font-weight: 700;
+        background-color: #222;
+        text-align: center;
+        align-self: center;
+        height: content-box;
+        padding: 15px;
+        border-radius: 5px;
+        @include boxShadow();
+        color: lightgray;
+        span {
+          display: block;
+          font-size: 11px;
+          color: gray;
+        }
+      }
+
+      .day-events {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        .event {
+          @include boxShadow();
+          padding: 15px 0;
+          flex: 1;
+          background-color: #222;
+          text-align: center;
+          border-radius: 5px;
+          &:not(:last-of-type) { border-right: 1px solid #444; }
+          .event-title {
+            font-size: 24px;
+            color: lightgray;
+          }
+          .event-details {
+            font-size: 15px;
+            font-weight: bold;
+            display: block !important;
+            color: gray;
+          }
+          .clock {
+            @include flexBox(center, center);
+            gap: 5px;
+            .clock-span {
+              padding: 5px 15px;
+              color: #FFF;
+              border-radius: 4px;
+              &:first-of-type { color: #2ecc71; }
+              &:last-of-type { color: #e74c3c; }
+              i {
+                font-size: 11px;
+                color: gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

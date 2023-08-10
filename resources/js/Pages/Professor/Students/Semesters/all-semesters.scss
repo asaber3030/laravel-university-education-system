@@ -1,0 +1,36 @@
+@import "../../../../assets/css/global";
+
+.all-semesters {
+  margin-top: 15px;
+  .semester {
+    background-color: #fff;
+    box-shadow: 0 2px 3px #DDD;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    .semester-header {
+      @include flexBox(space-between, center);
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f1f1f1;
+      h6 { font-size: 15px; }
+      .actions {
+        @include flexBox();
+        gap: 5px;
+        a svg { margin-right: 0 !important; }
+      }
+    }
+    .semester-content {
+      @include flexBox();
+      gap: 8px;
+      margin-top: 10px;
+      .subject {
+        background-color: #f5f5f5;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        padding: 5px 15px;
+        color: #444;
+        &:hover { background-color: #444; color: #f1f1f1; border-color: #444; }
+      }
+    }
+  }
+}

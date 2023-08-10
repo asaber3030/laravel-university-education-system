@@ -1,0 +1,29 @@
+@import "../../../../assets/css/global";
+
+.update-question-container {
+
+  .default-title {
+    margin-bottom: 0;
+    border-bottom-color: #e5e5e5;
+  }
+
+  .question-mcq-data {
+    margin-top: 40px;
+    @include makeBox();
+    height: fit-content;
+  }
+
+  .list-mcqs {
+    margin-top: 10px;
+
+    h6 {
+      margin: 20px 0
+    }
+
+    .mcq-item {
+      @include makeBox();
+      padding: 5px 10px;
+      margin: 5px 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../../assets/css/global";
+
+.update-course-grade {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  margin-top: 15px;
+  .student-card { margin-bottom: 10px; }
+  .default-box {
+    margin-bottom: 10px;
+    @include makeBox();
+  }
+  .right-components {
+    .default-title {
+      margin: 0 0 0 15px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .form-container {
+      padding: 10px 15px;
+    }
+  }
+}
+
+.light-weight {
+  font-weight: 400 !important;
+}

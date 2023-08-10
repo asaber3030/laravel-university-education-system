@@ -1,0 +1,35 @@
+@import "../../../../assets/css/global";
+
+.view-semester-data {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+  .left-grades {
+    .subject-grade {
+      padding: 10px 0 0;
+      table {
+        th, td { padding: 10px; }
+        tr.bg-danger {
+          background-color: #ffbaba !important;
+          td, th { color: #b00000; }
+        }
+        th.bg-success { background-color: #cfffcf !important; }
+        th.bg-warning { background-color: #ffe3aa !important; }
+      }
+    }
+  }
+  .right-grades {
+    @include makeBox();
+    height: fit-content;
+    margin-top: 10px;
+    > h6 { font-size: 14px; }
+    .actions {
+      @include flexBox();
+      padding: 10px 0 0;
+      border-top: 1px solid #f1f1f1;
+      margin-top: 10px;
+      gap: 20px;
+      a { font-size: 14px; }
+    }
+  }
+}

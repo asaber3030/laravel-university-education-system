@@ -1,0 +1,149 @@
+@import "../../../../assets/css/global";
+
+.view-student-page {
+  display: grid;
+  grid-template-columns: 30% 30% calc(40% - 10px);
+  gap: 10px;
+  margin: 10px 0;
+  .default-section {
+    @include boxShadow(3px);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    height: fit-content;
+    margin: 0 0 10px 0;
+    ul { padding: 0; }
+    .center-title {
+      margin: 10px 0;
+      text-align: center;
+      font-size: 25px;
+      color: #555;
+      svg { display: block; margin: 10px auto; font-size: 30px; }
+    }
+    .list-items {
+      ul {
+        padding: 0;
+        li {
+          @include flexBox(space-between, center);
+          padding: 5px;
+          font-size: 13px;
+          &:last-of-type { padding-bottom: 0; }
+        }
+      }
+    }
+    &.hover-effect {
+      @include transition();
+      cursor: pointer;
+      &:hover { background-color: $blue-dark; h1,h2,h3,h4,h5,h6 { color: #FFF !important; } }
+    }
+  }
+  .student-id-card {
+    .student-image {
+      @include flexBox();
+      gap: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f1f1f1;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+      }
+      span {
+        color: gray;
+        font-size: 12px;
+      }
+    }
+  }
+  .earned-titles {
+    .header-title {
+      text-align: center;
+      margin: 10px 0;
+      color: #555;
+    }
+    .badges {
+      @include flexBox(center, center);
+      gap: 25px;
+      margin: 25px 0 15px;
+      img { width: 60px; height: 60px; cursor: pointer; }
+    }
+  }
+  .current-semester {
+    padding-bottom: 3px;
+    h6 {
+      color: $green-dark !important;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #f1f1f1;
+      svg { display: block; margin: 0 auto 15px; font-size: 33px; color: $green-dark; }
+    }
+    p {
+      color: gray;
+      padding: 10px 5px 18px !important;
+      font-size: 13px;
+      border-top: 1px solid #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+      margin-top: 15px;
+      text-align: center;
+    }
+    .links {
+      text-align: center;
+      padding-bottom: 10px;
+      @include flexBox(center);
+      gap: 15px;
+    }
+    .list-items {
+      a {
+        margin: 10px 5px;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .current-studying-subjects {
+    .subjects {
+      @include flexBox(space-between, center);
+      padding: 10px 5px 0;
+      gap: 2px;
+      flex-wrap: wrap;
+      p { margin: 0; }
+      .subject {
+        flex: 1;
+        a {
+          @include makeBox(#fff);
+          border: 1px solid #f1f1f1;
+          padding: 8px 15px;
+          box-shadow: none;
+          text-align: center;
+          font-size: 13px;
+          display: block;
+          width: 100%;
+          &:hover { background-color: #f1f1f1 }
+        }
+      }
+    }
+  }
+  .years-grades {
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 25px auto;
+    }
+    p {
+      @include flexBox(space-between);
+      margin: 15px 0 0;
+      padding: 10px 5px 0;
+      span { font-weight: bold; }
+    }
+    li:not(:last-of-type) { border-bottom: 1px solid #f1f1f1; }
+  }
+  .student-assignments {
+    .inner-section {
+      h6 {
+        @include flexBox(space-between, center);
+        font-size: 18px;
+        margin: 10px 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #f1f1f1;
+      }
+    }
+  }
+}

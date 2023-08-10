@@ -1,0 +1,170 @@
+@import "../../../../assets/css/global";
+
+.send-email {
+  @include flexBox();
+  gap: 10px;
+  .left-data {
+    flex: 1.8;
+    margin: 10px 0;
+    .user {
+      @include flexBox();
+      @include boxShadow(3px);
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      gap: 15px;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+      }
+      span { display: block; line-height: 1; }
+      span > span { color: gray; font-size: 14px; margin-top: 5px }
+    }
+    .list-emails {
+      h6 {
+        font-size: 18px;
+        margin: 18px 0;
+      }
+      ul { padding: 0; }
+      li {
+        @include flexBox(space-between, center);
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 15px;
+        margin: 10px 0;
+        background-color: #FFF;
+        box-shadow: 0 2px 3px #ddd;
+        cursor: pointer;
+        &:hover { background-color: #222; color: #FFF; }
+        &.active { background-color: #222; color: #fff; }
+        div { padding: 0; margin: 0; }
+        .right-mail-data {
+          font-size: 13px;
+          color: gray;
+        }
+      }
+    }
+  }
+  .right-data {
+    padding: 5px 15px;
+    flex: 5;
+    margin-top: 10px;
+    > h6 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .form-container {
+      .form-group {
+        @include flexBox();
+        label { flex: 2; font-size: 17px }
+        .flex-box {
+          @include flexBox();
+          gap: 5px;
+          select {
+            flex: 5;
+            padding: 8px;
+          }
+          input { flex: 2 }
+        }
+        div {
+          flex: 8;
+        }
+      }
+    }
+  }
+}
+
+.list-student-mails {
+  .list-emails {
+    padding: 0;
+    li:first-of-type { margin-top: 0; }
+  }
+}
+
+.view-mail-data {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  .mail-importance-status {
+    margin: 15px 0;
+    .alert {
+      padding: 10px 25px;
+      font-weight: 600;
+      border-radius: 3px;
+    }
+  }
+  .user {
+    @include flexBox(flex-start, center);
+    @include boxShadow(3px);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    gap: 15px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+    }
+    span { display: block; line-height: 1; }
+    span > span { color: gray; font-size: 11px; margin-top: 5px }
+  }
+  h6 {
+    @include flexBox(space-between, center);
+    span { color: gray; font-size: 13px }
+  }
+}
+
+.list-null-page {
+  width: 100%;
+  ul {
+    padding: 0;
+    li {
+      padding: 5px 15px;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 3px #ddd;
+      border-radius: 5px;
+      margin: 10px 0;
+      a {
+        @include flexBox();
+        gap: 10px;
+        img { width: 40px; height: 40px; border-radius: 5px }
+        span {
+          display: block;
+          &:first-of-type { color: $blue-dark; }
+        }
+      }
+
+      @include flexBox(space-between, center);
+      div:last-of-type { font-size: 13px; color: gray; }
+    }
+  }
+}
+
+.delete-mail-view {
+  .user {
+    @include flexBox(space-between, center);
+    @include makeBox();
+    margin: 15px 0;
+    gap: 10px;
+    background-color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    .left-user {
+      @include flexBox(space-between, center);
+      gap: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+      }
+      span {
+        color: gray;
+        font-size: 12px;
+      }
+    }
+    .right-user {
+      a { margin: 10px 1.5px; text-align: center }
+    }
+  }
+}
